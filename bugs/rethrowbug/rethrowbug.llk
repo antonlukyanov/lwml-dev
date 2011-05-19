@@ -1,0 +1,7 @@
+use_rules('mingw.lru')
+
+addpar{
+  use = {},
+  start = 'rethrowbug.cc',
+  dest = 'rethrowbug.exe',
+}

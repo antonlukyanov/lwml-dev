@@ -1,0 +1,17 @@
+syntax:glob
+bugs/dllmtbug/*.a
+bugs/dllmtbug/*.dll
+bugs/dllmtbug/*.exe
+bugs/rethrowbug/*.a
+bugs/rethrowbug/*.dll
+bugs/rethrowbug/*.exe
+demo/fft2d_timing/fft2d_timing.exe
+demo/float-demo/float1-o3-fm.exe
+demo/float-demo/float1-o3-fs.exe
+demo/float-demo/float1-o3.exe
+demo/lltimer/lltimer.exe
+demo/round-demo/round.exe
+demo/sqsum/sqsum.exe
+tests-manual/mcontr/test.exe
+tests/test.exe
+obj/*.o

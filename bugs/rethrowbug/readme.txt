@@ -1,0 +1,1 @@
+bug in mingw gcc 3.2.3
