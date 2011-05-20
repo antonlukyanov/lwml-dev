@@ -15,3 +15,4 @@ demo/sqsum/sqsum.exe
 tests-manual/mcontr/test.exe
 tests/test.exe
 obj/*.o
+revision.hg
