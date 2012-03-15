@@ -21,7 +21,7 @@ namespace {
     int n = iter_stat::calc(d, alpha, &emid, &edev);
     real mid_err = fabs(emid - mid);
     real dev_err = fabs(edev - dev);
-    zzz("istat: len=%d(%d) mid_err=%lg dev_err=%lg", n, num, mid_err, dev_err);
+    zzz("istat: len=%d(%d) mid_err=%g dev_err=%g", n, num, mid_err, dev_err);
     bool is_ok = (mid_err < 1e-12 && dev_err < 1e-12 && n == num);
     if( !is_ok )
        zzz("istat fail: id=%d", id);

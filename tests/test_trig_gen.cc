@@ -26,7 +26,7 @@ bool test_trig_gen()
   }
   real sin_err = sins.max();
   real cos_err = coss.max();
-  zzz("trig_gen: sin_err=%lg, cos_err=%lg", sin_err, cos_err);
+  zzz("trig_gen: sin_err=%g, cos_err=%g", sin_err, cos_err);
   return sin_err < eps && cos_err < eps;
 }
 

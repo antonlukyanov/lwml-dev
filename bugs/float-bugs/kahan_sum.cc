@@ -40,12 +40,12 @@ void calc( const double d[], int len, double* mid, double* dev )
   }
 
   *mid = sx.get() / len;
-  printf("sx=%lg, sxx=%lg\n", sx.get(), sxx.get());
+  printf("sx=%g, sxx=%g\n", sx.get(), sxx.get());
 
-  printf("sxx/len=%.19lf, fsqr(mid)=%.19lf\n", sxx.get() / len, fsqr(*mid));
-  printf("d(sxx/len)=%le, d(fsqr(mid))=%le\n", sxx.get() / len - 64009.0, fsqr(*mid) - 64009.0);
+  printf("sxx/len=%.19f, fsqr(mid)=%.19f\n", sxx.get() / len, fsqr(*mid));
+  printf("d(sxx/len)=%e, d(fsqr(mid))=%e\n", sxx.get() / len - 64009.0, fsqr(*mid) - 64009.0);
   double dd = sxx.get() / len - fsqr(*mid);
-  printf("dd=%lg\n", dd);
+  printf("dd=%g\n", dd);
   *dev = sqrt(dd);
 }
 
@@ -58,5 +58,5 @@ int main( int argc, char *argv[] )
 
   double mid, dev;
   calc(d, N, &mid, &dev);
-  printf("len = %d, mid=%lg, dev=%lg\n", N, mid, dev);
+  printf("len = %d, mid=%g, dev=%g\n", N, mid, dev);
 }

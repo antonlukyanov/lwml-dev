@@ -38,7 +38,7 @@ bool test_rfft2(){
   }
   err1 /= len;
 
-  zzz("rfft: rcfft2_error=%lg", err1);
+  zzz("rfft: rcfft2_error=%g", err1);
 
   rfft::crifft2(a, b);
   real err2 = 0.0;
@@ -46,7 +46,7 @@ bool test_rfft2(){
     err2 += fabs(a[j] - a0[j]) - fabs(b[j] - b0[j]);
   err2 /= len;
 
-  zzz("rfft: crifft2_error=%lg", err2);
+  zzz("rfft: crifft2_error=%g", err2);
 
   return err1 < 1e-15 && err2 < 1e-15;
 }
@@ -76,7 +76,7 @@ bool test_rfft1(){
     err1 += (cmplx(x2r[j], x2i[j]) - cmplx(xr[j], xi[j])).norm();
   err1 /= len;
 
-  zzz("rfft: rcfft_error=%lg", err1);
+  zzz("rfft: rcfft_error=%g", err1);
 
   rfft::crifft(x2r, x2i);
 
@@ -85,7 +85,7 @@ bool test_rfft1(){
     err2 += fabs(x2r[j] - x00[j]) + fabs(x2i[j] - x01[j]);
   err2 /= len;
 
-  zzz("rfft: crifft_error=%lg", err2);
+  zzz("rfft: crifft_error=%g", err2);
 
   return err1 < 1e-15 && err2 < 1e-15;
 }

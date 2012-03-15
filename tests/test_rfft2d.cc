@@ -42,11 +42,11 @@ bool test_rfft2d(){
   }
   err /= (len * len / 4);
 
-  zzz("rfft2d: rcfft_error=%lg", err);
+  zzz("rfft2d: rcfft_error=%g", err);
 
   rfft2d::crifft(x0);
   real err2 = matrix::dist(x0, x00);
-  zzz("rfft2d: crifft_error=%lg", err2);
+  zzz("rfft2d: crifft_error=%g", err2);
 
   return err < 1e-12 && err2 < 1e-12;
 }

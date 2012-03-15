@@ -13,5 +13,5 @@ int main( int argc, char *argv[] ){
   for( j = 0; j < 3; j++ )
     sum += cf[j] * x[j];
 
-  printf("%le", sum - 1.0);
+  printf("%e", sum - 1.0);
 }

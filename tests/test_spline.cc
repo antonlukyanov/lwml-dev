@@ -72,8 +72,8 @@ bool test_spline()
   if( zzz_dump() )
     val_errs.save(zzz_dump_name("sp_val_errs.dat").ascstr());
 
-  zzz("spline: eps=%lg, eps1=%lg", eps, eps1);
-  zzz("spline: knot_err=%lg, val_err=%lg", knot_err, val_err);
+  zzz("spline: eps=%g, eps1=%g", eps, eps1);
+  zzz("spline: knot_err=%g, val_err=%g", knot_err, val_err);
   return knot_err < eps && val_err < eps1;
 }
 

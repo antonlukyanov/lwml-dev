@@ -59,7 +59,7 @@ bool test_lu3d()
   real lud_err = vector::dist(b, x0);
   real gj3d_err = vector::dist(x, x0);
 
-  zzz("lu3d: gj3d_err=%lg lud_err=%lg", gj3d_err, lud_err);
+  zzz("lu3d: gj3d_err=%g lud_err=%g", gj3d_err, lud_err);
 
   return vector::dist(b, x) < 10.0 * lud_err;
 }

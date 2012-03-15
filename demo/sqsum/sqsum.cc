@@ -93,12 +93,12 @@ try{
 
   real m = 0.5 * (1e-6 + 1e6);
   real d = 0.5 * (fsqr(1e-6 - m) + fsqr(1e6 - m));
-  printf("d: %le\n", d);
+  printf("d: %e\n", d);
 
-  printf("disp: %le\n", fabs(x.disp() - d));
-  printf("simp: %le\n", fabs(s.get() - d));
-  printf("simp2: %le\n", fabs(s2.get() - d));
-  printf("kahn: %le\n", fabs(sk.get() - d));
+  printf("disp: %e\n", fabs(x.disp() - d));
+  printf("simp: %e\n", fabs(s.get() - d));
+  printf("simp2: %e\n", fabs(s2.get() - d));
+  printf("kahn: %e\n", fabs(sk.get() - d));
 
 }catch( error& er ){
   console::handlex(er);

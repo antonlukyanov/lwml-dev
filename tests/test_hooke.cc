@@ -31,7 +31,7 @@ bool test_hooke()
   int jj = hooke::calc(fn, x0, x, dx, 0.5, 1e-8, 500);
   real x0_err = fabs(1.0 - x[0]);
   real x1_err = fabs(1.0 - x[1]);
-  zzz("hooke: steps=%d x0_err=%lg x1_err=%.2le", jj, x0_err, x1_err);
+  zzz("hooke: steps=%d x0_err=%g x1_err=%.2e", jj, x0_err, x1_err);
   return jj < 500 && x0_err < 1e-6 && x1_err < 1e-6;
 }
 

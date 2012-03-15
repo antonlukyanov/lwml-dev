@@ -36,7 +36,7 @@ bool test_fft2d(){
   }
   err /= (len * len);
 
-  zzz("fft2d: error=%lg", err);
+  zzz("fft2d: error=%g", err);
 
   return err < 1e-12;
 }

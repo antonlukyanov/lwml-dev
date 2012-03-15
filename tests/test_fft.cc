@@ -27,7 +27,7 @@ bool test_fft(){
     err += (spv - cmplx(xr[j], xi[j])).norm();
   }
 
-  zzz("fft: error=%lg", err);
+  zzz("fft: error=%g", err);
 
   xr0 = xr;
   xi0 = xi;
@@ -39,7 +39,7 @@ bool test_fft(){
     ierr += (spv - cmplx(xr[j], xi[j])).norm();
   }
 
-  zzz("ifft: error=%lg", ierr);
+  zzz("ifft: error=%g", ierr);
 
   return err < 1e-10 && ierr < 1e-10;
 }
