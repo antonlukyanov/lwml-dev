@@ -26,15 +26,15 @@ try{
 
   timer tm;
   fft2d::cfft(xr, xi);
-  printf("cfft: time=%lf\n", tm.left());
+  printf("cfft: time=%f\n", tm.left());
 
   tm.restart();
   rfft2d::rcfft(x0);
-  printf("rcfft: time=%lf\n", tm.left());
+  printf("rcfft: time=%f\n", tm.left());
 
   tm.restart();
   rfft2d::crifft(x0);
-  printf("crifft: time=%lf\n", tm.left());
+  printf("crifft: time=%f\n", tm.left());
 
 }catch( error& err ){
   console::handlex(err);

@@ -25,6 +25,6 @@ int main(){
     s = t;
   }
 
-  printf("%lf - %d*(0.1) = %.25g\n", N*0.1, N, N*0.1-x4);
-  printf("%lf - %d*(0.1) = %.25g\n", N*0.1, N, N*0.1-s);
+  printf("%f - %d*(0.1) = %.25g\n", N*0.1, N, N*0.1-x4);
+  printf("%f - %d*(0.1) = %.25g\n", N*0.1, N, N*0.1-s);
 }

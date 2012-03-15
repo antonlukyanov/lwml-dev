@@ -49,7 +49,7 @@ real x2::get( int j ) const { return _data[j]; }
         sum += use;                      \
       }                                  \
     }                                    \
-    printf("%s=%lf\n", msg, 10*tm.left());  \
+    printf("%s=%f\n", msg, 10*tm.left());  \
   }                                      //
 
 int main( int argc, char *argv[] ){
