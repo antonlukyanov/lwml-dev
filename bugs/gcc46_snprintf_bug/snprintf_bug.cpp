@@ -1,21 +1,40 @@
-/*
- * for gcc.EXE (GCC) 4.6.2
- * the output of this program is:
- * 
- * 10.000000 10.000000 10 10
- * 10.000000 0.000000 5.31665e-315 3.9226e-4942
- */
-
 #include <stdio.h>
 
 #define LEN 1024
 
+#define PR(var, fmt) \
+  printf("printf: %c" #var "(%%" #fmt ")=%" #fmt "%c\n", ch, var, ch)
+
+#define SPR(var, fmt) \
+  snprintf(buf, LEN, "snprintf: %c" #var "(%%" #fmt ")=%" #fmt "%c\n", ch, var, ch); \
+  printf("%s", buf)
+
 int main()
 {
-  double x = 10.0;
-  printf("%f %lf %g %lg\n", x, x, x, x);
+  float fx = 10.0;
+  double dx = 10.0;
+  long double ldx = 10.0;
+  char ch = '*';
+
+  PR(fx, f);
+  PR(fx, lf);
+  PR(fx, Lf);
+  PR(dx, f);
+  PR(dx, lf);
+  PR(dx, Lf);
+  PR(ldx, f);
+  PR(ldx, lf);
+  PR(ldx, Lf);
 
   char buf[LEN];
-  snprintf(buf, LEN, "%f %lf %g %lg\n", x, x, x, x);
-  printf("%s", buf);
+
+  SPR(fx, f);
+  SPR(fx, lf);
+  SPR(fx, Lf);
+  SPR(dx, f);
+  SPR(dx, lf);
+  SPR(dx, Lf);
+  SPR(ldx, f);
+  SPR(ldx, lf);
+  SPR(ldx, Lf);
 }
