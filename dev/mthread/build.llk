@@ -1,0 +1,9 @@
+use_rules('lwml/mingw.lru')
+
+name = "test"
+
+addpar{
+  use = { 'lwml' },
+  start = name .. '.cc',
+  dest = name .. '.exe',
+}
