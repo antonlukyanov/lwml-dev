@@ -1,7 +1,0 @@
-use_rules('lwml/mingw.lru', { debug = true })
-
-addpar{
-  use = { 'lwml' },
-  start = 'all.cc',
-  dest = 'all.exe',
-}
