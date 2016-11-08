@@ -1,39 +1,58 @@
 #!/usr/bin/env python3
 
-"""
-This script recursively processes source files in specified folder and replaces includes of the
-form #include "header.h" with #inlcude "abspath/header.h". It also converts text encoding from
-windows-1251 to utf-8.
-"""
-
 import os
 import re
 import argparse
 
 
 parser = argparse.ArgumentParser(
-    description=""
+    description="""This script recursively processes source files in specified folder and replaces
+                   includes of the form #include "header.h" with #inlcude "abspath/header.h". It
+                   also converts text encoding from windows-1251 to utf-8."""
 )
 parser.add_argument('path')
+parser.add_argument(
+    '-p', '--prefix',
+    help='''Prefix for includes, i.e. #include "<prefix>/abspath/header.h". By default prefix is
+            the last component of <path> argument.''',
+    action='store'
+)
+parser.add_argument(
+    '-e', '--exclude',
+    help='Comma-separated list of directories in <path> which will be excluded from processing.',
+    action='store'
+)
+
 args = parser.parse_args()
 
-includes = {}
-prefix = args.path.split('/')[-1]
+if not args.prefix:
+    prefix = args.path.split('/')[-1]
+else:
+    prefix = args.prefix.strip('/')
+
+if args.exclude:
+    exclude = args.exclude.split(',')
+else:
+    exclude = []
+
 paths = []
 path = args.path
+includes = {}
 
 while path:
     if path:
         for entry in os.scandir(path):
             fname = entry.name
-            if not fname.startswith('.') and entry.is_file() and fname.endswith(('.cc', '.h')):
-                include = os.path.join(
-                    prefix,
-                    entry.path.replace(args.path.strip('/') + '/', ''),
-                )
-                includes[fname] = (include, entry.path)
-            elif entry.is_dir():
-                paths.append(entry.path)
+            if not fname.startswith('.'):
+                if entry.is_file() and fname.endswith(('.cc', '.h')):
+                    include = os.path.join(
+                        prefix,
+                        entry.path.replace(args.path.strip('/') + '/', ''),
+                    )
+                    includes[fname] = (include, entry.path)
+                elif entry.is_dir():
+                    if path == args.path and entry.name not in exclude or path != args.path:
+                        paths.append(entry.path)
     try:
         path = paths.pop()
     except IndexError:
