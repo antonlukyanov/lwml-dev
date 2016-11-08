@@ -1,7 +1,6 @@
-#include "lwml.h"
-
-#include "mcontr.h"
-#include "vbmp.h"
+#include "lwml/lwml.h"
+#include "lwml/m_import/resample.h"
+#include "lwml/formats/vbmp.h"
 
 using namespace lwml;
 
@@ -13,19 +12,14 @@ try{
   matrix src(bmp.ly(), bmp.lx());
   bmp.get(src);
 
-  real par = config()->get_real("par");
-  real sh = config()->get_real("sh");
+  int k = config()->get_int("k");
+  int r = config()->get_int("r");
 
-  matrix src_dc(src);
-  matrix src_uc(src);
+  matrix dst(k*bmp.ly(), k*bmp.lx());
+  lanczos::warp(dst, src, r);
 
-  mcontr::decontr(src_dc, par, sh);
-  mcontr::upcontr(src_uc, par, sh);
+  vbmp::save("resamp.bmp", dst);
 
-  vbmp::save("decontr.bmp", src_dc);
-  vbmp::save("upcontr.bmp", src_uc);
-
-/*
   matrix dst2(k*bmp.ly(), k*bmp.lx());
   for( int s = 0; s < dst2.str(); s++ ){
     real rs = scale::coord(s, 0, dst2.str()-1, 0, src.str()-1);
@@ -35,7 +29,6 @@ try{
     }
   }
   vbmp::save("resamp2.bmp", dst2);
-*/
 
 }catch( error& er ){
   console::handlex(er);
