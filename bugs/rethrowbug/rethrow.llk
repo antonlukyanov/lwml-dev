@@ -1,7 +1,0 @@
-use_rules('lwml/mingw.lru', { dll = true } )
-
-addpar{
-  use = { 'lwml' },
-  start = 'rethrow.cc',
-  dest = 'rethrow.dll'
-}

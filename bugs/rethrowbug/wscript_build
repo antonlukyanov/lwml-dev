@@ -1,0 +1,2 @@
+bld.shlib(source='rethrow.cc', target='rethrow')
+bld.program(source='rethrowbug.cc', target='rethrowbug')

@@ -1,7 +1,0 @@
-use_rules('lwml/mingw.lru')
-
-addpar{
-  use = {},
-  start = 'rethrowbug.cc',
-  dest = 'rethrowbug.exe',
-}
