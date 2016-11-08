@@ -1,8 +1,8 @@
-#include "test_fft.h"
+#include "tests/test_fft.h"
 
-#include "fft.h"
-#include "frand.h"
-#include "debug.h"
+#include "lwml/fourier/fft.h"
+#include "lwml/random/frand.h"
+#include "lwml/utils/debug.h"
 
 /*#lake:stop*/
 

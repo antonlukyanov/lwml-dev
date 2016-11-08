@@ -1,10 +1,10 @@
-#include "test_rfft2d.h"
+#include "tests/test_rfft2d.h"
 
-#include "fft2d.h"
-#include "rfft2d.h"
-#include "frand.h"
-#include "debug.h"
-#include "cmplx.h"
+#include "lwml/fourier/fft2d.h"
+#include "lwml/fourier/rfft2d.h"
+#include "lwml/random/frand.h"
+#include "lwml/utils/debug.h"
+#include "lwml/m_types/cmplx.h"
 
 /*#lake:stop*/
 

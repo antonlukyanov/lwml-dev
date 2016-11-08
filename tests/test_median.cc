@@ -1,7 +1,7 @@
-#include "test_median.h"
+#include "tests/test_median.h"
 
-#include "medianfilt.h"
-#include "frand.h"
+#include "lwml/fourier/medianfilt.h"
+#include "lwml/random/frand.h"
 
 /*#lake:stop*/
 

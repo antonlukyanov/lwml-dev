@@ -1,17 +1,17 @@
-#include "lwml.h"
+#include "lwml/lwml.h"
 
-#include "tutils.h"
+#include "tests/tutils.h"
 
-#include "test_lu3d.h"
-#include "test_median.h"
-#include "test_hooke.h"
-#include "test_iterstat.h"
-#include "test_trig_gen.h"
-#include "test_fft.h"
-#include "test_rfft.h"
-#include "test_fft2d.h"
-#include "test_rfft2d.h"
-#include "test_spline.h"
+#include "tests/test_lu3d.h"
+#include "tests/test_median.h"
+#include "tests/test_hooke.h"
+#include "tests/test_iterstat.h"
+#include "tests/test_trig_gen.h"
+#include "tests/test_fft.h"
+#include "tests/test_rfft.h"
+#include "tests/test_fft2d.h"
+#include "tests/test_rfft2d.h"
+#include "tests/test_spline.h"
 
 using namespace lwml;
 using namespace lwml_test;

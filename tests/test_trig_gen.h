@@ -4,8 +4,8 @@
 #ifndef _TEST_TRIG_GEN_
 #define _TEST_TRIG_GEN_
 
-#include "defs.h"
-#include "mdefs.h"
+#include "lwml/base/defs.h"
+#include "lwml/m_base/mdefs.h"
 
 /*#lake:stop*/
 

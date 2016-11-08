@@ -1,0 +1,1 @@
+bld.program(source='test.cc', target='test')

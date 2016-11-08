@@ -1,13 +1,13 @@
-#include "test_hooke.h"
+#include "tests/test_hooke.h"
 
-#include "debug.h"
-#include "hooke.h"
+#include "lwml/utils/debug.h"
+#include "lwml/m_alg/hooke.h"
 
 /*#lake:stop*/
 
 namespace lwml_test {
 
-// тестовый пример: банан Розенброка
+// С‚РµСЃС‚РѕРІС‹Р№ РїСЂРёРјРµСЂ: Р±Р°РЅР°РЅ Р РѕР·РµРЅР±СЂРѕРєР°
 // Rosenbrocks classic parabolic valley ("banana") function
 
 class rosenbroke : public i_vfunction {

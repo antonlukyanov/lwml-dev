@@ -1,11 +1,11 @@
-#include "test_rfft.h"
+#include "tests/test_rfft.h"
 
-#include "tutils.h"
+#include "tests/tutils.h"
 
-#include "fft.h"
-#include "rfft.h"
-#include "frand.h"
-#include "debug.h"
+#include "lwml/fourier/fft.h"
+#include "lwml/fourier/rfft.h"
+#include "lwml/random/frand.h"
+#include "lwml/utils/debug.h"
 
 /*#lake:stop*/
 

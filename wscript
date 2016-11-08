@@ -32,4 +32,5 @@ def build(bld):
         'lwml',
         'tests-manual/mcontr',
         'tests-manual/resamp',
+        'tests'
     ])

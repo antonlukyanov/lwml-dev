@@ -1,7 +1,7 @@
-#include "lwml.h"
-#include "frand.h"
-#include "vector.h"
-#include "mdefs.h"
+#include "lwml/lwml.h"
+#include "lwml/random/frand.h"
+#include "lwml/m_types/vector.h"
+#include "lwml/m_base/mdefs.h"
 
 using namespace lwml;
 

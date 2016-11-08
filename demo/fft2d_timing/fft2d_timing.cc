@@ -1,9 +1,9 @@
-#include "lwml.h"
-#include "debug.h"
-#include "fft2d.h"
-#include "rfft2d.h"
-#include "frand.h"
-#include "timer.h"
+#include "lwml/lwml.h"
+#include "lwml/utils/debug.h"
+#include "lwml/fourier/fft2d.h"
+#include "lwml/fourier/rfft2d.h"
+#include "lwml/random/frand.h"
+#include "lwml/utils/timer.h"
 
 using namespace lwml;
 

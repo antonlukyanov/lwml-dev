@@ -1,9 +1,9 @@
-#include "test_trig_gen.h"
+#include "tests/test_trig_gen.h"
 
-#include "debug.h"
-#include "vector.h"
+#include "lwml/utils/debug.h"
+#include "lwml/m_types/vector.h"
 
-#include "trig_gen.h"
+#include "lwml/m_base/trig_gen.h"
 
 /*#lake:stop*/
 

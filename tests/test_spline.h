@@ -4,8 +4,8 @@
 #ifndef _TEST_SPLINE_
 #define _TEST_SPLINE_
 
-#include "defs.h"
-#include "mdefs.h"
+#include "lwml/base/defs.h"
+#include "lwml/m_base/mdefs.h"
 
 /*#lake:stop*/
 

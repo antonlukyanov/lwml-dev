@@ -1,10 +1,10 @@
-#include "test_spline.h"
+#include "tests/test_spline.h"
 
-#include "debug.h"
-#include "vector.h"
+#include "lwml/utils/debug.h"
+#include "lwml/m_types/vector.h"
 
-#include "spline.h"
-#include "lms.h"
+#include "lwml/m_alg/spline.h"
+#include "lwml/m_alg/lms.h"
 
 /*#lake:stop*/
 
@@ -13,11 +13,11 @@ namespace lwml_test {
 namespace {
   const real T = 2.0*M_PI;
   const int n = 100;
-  const int addon = 3; // количество вычисляемых значений между узлами
+  const int addon = 3; // РєРѕР»РёС‡РµСЃС‚РІРѕ РІС‹С‡РёСЃР»СЏРµРјС‹С… Р·РЅР°С‡РµРЅРёР№ РјРµР¶РґСѓ СѓР·Р»Р°РјРё
   const int n2 = n + addon*(n-1);
   const real delta = 0.0;
-  const real eps = 1.0e-12; // погрешность в узлах
-  const real eps1 = (T/n)*(T/n)*(T/n); // погрешность в промежутках
+  const real eps = 1.0e-12; // РїРѕРіСЂРµС€РЅРѕСЃС‚СЊ РІ СѓР·Р»Р°С…
+  const real eps1 = (T/n)*(T/n)*(T/n); // РїРѕРіСЂРµС€РЅРѕСЃС‚СЊ РІ РїСЂРѕРјРµР¶СѓС‚РєР°С…
 
   real func( real x ){
 //~     return x*x*x + 2*x*x +3*x + 1;
@@ -43,7 +43,7 @@ bool test_spline()
   sp.put(x, y, func_der2(0.0), func_der2(n-1));
 //~   sp.put(x, y, 0.0, 0.0);
 
-  // проверка значений в узлах
+  // РїСЂРѕРІРµСЂРєР° Р·РЅР°С‡РµРЅРёР№ РІ СѓР·Р»Р°С…
   vector knot_errs(n);
   real knot_err = 0;
   for( int i = 0; i < n; ++i ){
@@ -55,11 +55,11 @@ bool test_spline()
   if( zzz_dump() )
     knot_errs.save(zzz_dump_name("sp_knot_errs.dat").ascstr());
 
-  // считаем в бОльшем числе точек
+  // СЃС‡РёС‚Р°РµРј РІ Р±РћР»СЊС€РµРј С‡РёСЃР»Рµ С‚РѕС‡РµРє
   vector val_errs(n2);
   real val_err = 0;
   for( int i = 0; i < n; ++i ){
-    for( int j = 0; j <= addon; ++j ){ // дополнительные узлы в промежутках
+    for( int j = 0; j <= addon; ++j ){ // РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СѓР·Р»С‹ РІ РїСЂРѕРјРµР¶СѓС‚РєР°С…
       real x = i + j / real_cast(addon+1);
       if( x <= n-1 ){
         real d = fabs(func(x)-sp.calc(x));

@@ -1,8 +1,8 @@
-#include "lwml.h"
-#include "timer.h"
-#include "refcount.h"
-#include "frand.h"
-#include "vector.h"
+#include "lwml/lwml.h"
+#include "lwml/utils/timer.h"
+#include "lwml/base/refcount.h"
+#include "lwml/random/frand.h"
+#include "lwml/m_types/vector.h"
 
 using namespace lwml;
 

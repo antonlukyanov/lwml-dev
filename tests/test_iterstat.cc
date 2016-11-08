@@ -1,9 +1,9 @@
-#include "test_iterstat.h"
+#include "tests/test_iterstat.h"
 
-#include "tutils.h"
+#include "tests/tutils.h"
 
-#include "debug.h"
-#include "iterstat.h"
+#include "lwml/utils/debug.h"
+#include "lwml/m_alg_spec/iterstat.h"
 
 /*#lake:stop*/
 

@@ -1,11 +1,11 @@
-#include "test_fft2d.h"
+#include "tests/test_fft2d.h"
 
-// Это очень странный тест: он проверяет только взаимную обратимость
-// двумерного преобразования
+// Р­С‚Рѕ РѕС‡РµРЅСЊ СЃС‚СЂР°РЅРЅС‹Р№ С‚РµСЃС‚: РѕРЅ РїСЂРѕРІРµСЂСЏРµС‚ С‚РѕР»СЊРєРѕ РІР·Р°РёРјРЅСѓСЋ РѕР±СЂР°С‚РёРјРѕСЃС‚СЊ
+// РґРІСѓРјРµСЂРЅРѕРіРѕ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ
 
-#include "fft2d.h"
-#include "frand.h"
-#include "debug.h"
+#include "lwml/fourier/fft2d.h"
+#include "lwml/random/frand.h"
+#include "lwml/utils/debug.h"
 
 /*#lake:stop*/
 

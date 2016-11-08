@@ -6,8 +6,8 @@
 #ifndef _TEST_RFFT2D_
 #define _TEST_RFFT2D_
 
-#include "defs.h"
-#include "mdefs.h"
+#include "lwml/base/defs.h"
+#include "lwml/m_base/mdefs.h"
 
 /*#lake:stop*/
 

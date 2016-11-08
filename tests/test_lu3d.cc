@@ -1,9 +1,9 @@
-#include "test_lu3d.h"
+#include "tests/test_lu3d.h"
 
-#include "frand.h"
-#include "lud.h"
-#include "gj3d.h"
-#include "debug.h"
+#include "lwml/random/frand.h"
+#include "lwml/m_alg/lud.h"
+#include "lwml/m_alg/gj3d.h"
+#include "lwml/utils/debug.h"
 
 /*#lake:stop*/
 
@@ -47,12 +47,12 @@ bool test_lu3d()
   lud lu(n);
   lu.put(a);
   lu.solve(b);
-  // b - решение из lud
+  // b - СЂРµС€РµРЅРёРµ РёР· lud
 
   gj3d lu3(n);
   vector x(n);
   lu3.calc(x, aa, bb, cc, dd);
-  // x - решение по gj3d
+  // x - СЂРµС€РµРЅРёРµ РїРѕ gj3d
 
   vector x0(n, 1.0);
 
