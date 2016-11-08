@@ -1,9 +1,0 @@
-use_rules('lwml/mingw.lru')
-
-name = 'fft2d_timing'
-
-addpar{
-  use = { 'lwml' },
-  start = name .. '.cc',
-  dest = name .. '.exe',
-}

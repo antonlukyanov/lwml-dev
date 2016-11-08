@@ -32,5 +32,10 @@ def build(bld):
         'lwml',
         'tests-manual/mcontr',
         'tests-manual/resamp',
-        'tests'
+        'tests',
+        'demo/fft2d_timing',
+        'demo/float-demo',
+        'demo/lltimer',
+        'demo/round-demo',
+        'demo/sqsum',
     ])

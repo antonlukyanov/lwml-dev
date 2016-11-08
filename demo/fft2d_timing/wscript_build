@@ -1,0 +1,1 @@
+bld.program(source='fft2d_timing.cc', target='fft2d_timing')

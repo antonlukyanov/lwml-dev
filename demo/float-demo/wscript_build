@@ -1,0 +1,3 @@
+bld.program(source='float1.cc', target='float1-o3', cxxflags='-O3')
+bld.program(source='float1.cc', target='float1-o3-fs', cxxflags='-ffloat-store -O3')
+bld.program(source='float1.cc', target='float1-o3-fm', cxxflags='-ffast-math -O3')

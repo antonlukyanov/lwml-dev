@@ -1,0 +1,1 @@
+bld.program(source='sqsum.cc', target='sqsum')

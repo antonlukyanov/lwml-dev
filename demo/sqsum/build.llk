@@ -1,7 +1,0 @@
-use_rules('lwml/mingw.lru')
-
-addpar{
-  use = { 'lwml', },
-  start = 'sqsum.cc',
-  dest = 'sqsum.exe',
-}
