@@ -14,13 +14,8 @@ def options(opt):
 
 
 def configure(conf):
-    conf.load([
-        # Automatic dependency search. This also add 'autodeps' logging zone.
-        # You can see the output by providing flag '--zones=autodeps'.
-        'cxx_autodeps',
-        # Default definitions for project which contains lwml library.
-        'cxx_lwml'
-    ], tooldir='scripts/waf')
+    # Default definitions for project which contains lwml library.
+    conf.load('cxx_lwml', tooldir='scripts/waf')
 
 
 def build(bld):
