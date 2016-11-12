@@ -1,25 +1,26 @@
 #!/usr/bin/env python3
 
 # This enables default 'debug' command which duplicates 'build'
-# command but represents different `variant build` and adds debug flags.
+# command but represents different `variant` and adds debug flags.
 # You can run 'waf debug -v --targets=mcontr' to see the process of build.
 import scripts.waf.cxx_lwml
 
+
 top = '.'
 out = '__build'
+tooldir = 'scripts/waf'
 
 
 def options(opt):
-    opt.load('cxx_lwml', tooldir='scripts/waf')
+    opt.load('cxx_lwml', tooldir=tooldir)
 
 
 def configure(conf):
-    # Default definitions for project which contains lwml library.
-    conf.load('cxx_lwml', tooldir='scripts/waf')
+    conf.load('cxx_lwml', tooldir=tooldir)
 
 
 def build(bld):
-    bld.recurse('lwml', opt=True)
+    bld.recurse('lwml', optional=True)
     bld.recurse([
         'tests-manual/mcontr',
         'tests-manual/resamp',
